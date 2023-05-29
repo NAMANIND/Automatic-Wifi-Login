@@ -52,7 +52,7 @@ Fill out your login info once and click on save button
 ![image](https://github.com/NAMANIND/Automatic-Wifi-Login/assets/88327184/87a858bb-1e85-42ac-b7f6-f09ec96ac01d)
 
 
-Now whenever the wifi window will open on your crome tab this extention will automaticaly fill out your detail and submit the page. After submitting the page it will open a new tab with the redirect link you have provided.
+Now whenever the wifi login window will open on your crome tab this extention will automaticaly fill out your detail and submit the page. After submitting the page it will open a new tab with the redirect link you have provided.
 
 
 ### Don't forget to give this repository a star⭐.
