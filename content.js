@@ -40,26 +40,28 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
       } 
     });
+
+    chrome.storage.local.get(["redirectUrl"], function(result) {
+ 
+      var storedreURl = result.redirectUrl || "www.youtube.com/";
+  
+    function openNewTab(url) {
+      if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        url = 'https://' + url;
+      }
+      window.open(url, '_blank');
+    }
+  
+    if (window.location.href.includes("keepalive")) {
+      openNewTab(storedreURl);
+    }
+  });
+
+
   }
 
     
-  chrome.storage.local.get(["redirectUrl"], function(result) {
- 
-    var storedreURl = result.redirectUrl || "www.youtube.com/";
 
-  function openNewTab(url) {
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      url = 'https://' + url;
-    }
-    window.open(url, '_blank');
-  }
-
-  if (window.location.href.includes("keepalive")) {
-    openNewTab(storedreURl);
-  }
-
-
-});
 
 
   console.log("Made by Naman Rai ♥");
