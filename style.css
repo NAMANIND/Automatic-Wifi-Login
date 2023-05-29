@@ -1,0 +1,42 @@
+body {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 10px 5px;
+    background-color: aliceblue;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p,input,button {
+    display: inner-flex;
+    margin:  5px 0;
+    font-size: 22px;
+    color: rgba(0, 0, 255, 0.77);
+    border-radius: 6px;
+    border: 1px solid lightblue;
+    padding: 5px;
+}
+
+h2{
+    color: blue;
+}
+
+label{
+    color: black;
+    font-size: medium;
+    font-weight: 500;
+}
+
+
+#saveButton{
+    background-color: rgba(0, 0, 255, 0.5);
+    color: white;
+    width: 95%;
+    
+}
+
+#saveButton:hover{
+    background-color: blue;
+}
