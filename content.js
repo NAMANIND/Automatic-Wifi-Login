@@ -34,28 +34,32 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         passwordInput.value = storedPassword;
         // reUrlInput.value = storedreURl;
     
-        var form = usernameInput.closest('form');
-        if (form) {
-          form.submit();
-        }
+      
         
         function openNewTab(url) {
           if (!url.startsWith('http://') && !url.startsWith('https://')) {
             url = 'https://' + url;
           }
-          window.open(url, '_blank');
+          if(window.location.href.includes("/keepalive")){
+            window.open(url, '_blank');
+          }
+         
+        }
+
+        var form = usernameInput.closest('form');
+        if (form) {
+          form.submit();
+          
         }
         
-        // Example usage
         openNewTab(storedreURl );
+      
+        
       }
     });
   }
   
-  // Automatically fill the form after 5 seconds of page load
-  setTimeout(function() {
-    fillForm();
-  }, 2000);
+
 
   console.log("Made by Naman Rai ♥");
     console.log("Follow me on github: github.com/NAMANIND");
