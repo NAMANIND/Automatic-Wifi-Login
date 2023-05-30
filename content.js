@@ -40,25 +40,22 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
       } 
     });
+  }
 
-    chrome.storage.local.get(["redirectUrl"], function(result) {
- 
-      var storedreURl = result.redirectUrl || "www.youtube.com/";
+  function openNewTab(url) {
+    window.open(url, '_blank');
+  }
   
-    function openNewTab(url) {
-      if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        url = 'https://' + url;
-      }
-      window.open(url, '_blank');
-    }
+  chrome.storage.local.get(["redirectUrl"], function(result) {
+    var storedUrl = result.redirectUrl || "www.youtube.com/";
   
     if (window.location.href.includes("keepalive")) {
-      openNewTab(storedreURl);
+      if (!storedUrl.startsWith('http://') && !storedUrl.startsWith('https://')) {
+        storedUrl = 'https://' + storedUrl;
+      }
+      openNewTab(storedUrl);
     }
   });
-
-
-  }
 
     
 
