@@ -51,7 +51,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       var storedUsername = result.username || "";
       var storedPassword = result.password || "";
       
-
+        console.log("Made by Naman Rai ♥");
+        console.log("Follow me on github: github.com/NAMANIND");
+  
 
       
       if (usernameInput && passwordInput && storedUsername && storedPassword) {
@@ -73,7 +75,5 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 
 
-  console.log("Made by Naman Rai ♥");
-  console.log("Follow me on github: github.com/NAMANIND");
-  
+
 
