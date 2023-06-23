@@ -9,6 +9,7 @@ body {
     display: flex ;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -45,13 +46,29 @@ label{
     margin: 0%;
 }
 
+
 #credentialsList {
     width: 95%;
+    max-height: 120px; /* Adjust the height as needed */
+    overflow: auto;
     /* list-style-type: disc;  */
     padding-left: 0px; /* Add some left padding for indentation */
     color: #000;
     margin: 0;
   }
+
+  #credentialsList::-webkit-scrollbar {
+    width: 5px !important; /* Adjust the width as needed */
+  }
+  
+  #credentialsList::-webkit-scrollbar-track {
+    background-color: #dddddd;
+  }
+  
+  #credentialsList::-webkit-scrollbar-thumb {
+    background-color: #888888;
+  }
+
 
   #credentialsList h3{
     font-weight: 400 !important;
@@ -80,6 +97,7 @@ label{
   }
 
 #savedData div{
+    margin-right: 5px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     text-align: center;
