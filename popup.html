@@ -5,13 +5,21 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h2>Automatic Wifi Login</h2>
-    <label>Username  <input type="text" name="username" id="usernameInput" placeholder="Username"></label>
- 
-  <label>Password <input type="password" name="password" id="passwordInput" placeholder="Password"> </label>
-
-  <label>Redirect Url<input type="text" name="redirectUrl" id="redirectLink" placeholder="www.youtube.com"> </label>
+  <h2>Automatic Wi-Fi Login</h2>
   
+  <div id="savedData">
+    <h3 class="save">Saved Data:</h3>
+    <ul id="credentialsList"></ul>
+  </div>
+  
+  <label>Username: <input type="text" name="username" id="usernameInput" placeholder="Username"></label>
+  <br>
+  <label>Password: <input type="password" name="password" id="passwordInput" placeholder="Password"></label>
+  <br>
+  <label>Redirect URL: <input type="text" name="redirectUrl" id="redirectLink" placeholder="www.youtube.com"></label>
+  <br>
   <button id="saveButton">Save</button>
+
+
 </body>
 </html>
