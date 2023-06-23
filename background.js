@@ -22,7 +22,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 });
   
 
-  const refreshInterval = 5000; // Refresh every 2000 seconds (33 minutes)
+  const refreshInterval = 2000000; // Refresh every 2000 seconds (33 minutes)
   const tabsToRefresh = {};
   
 
