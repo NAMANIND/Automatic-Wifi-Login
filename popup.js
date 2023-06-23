@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
     displayCredentials(credentials);
     if(credentials.length == 0) {
       saveddata.style.display = "none";
+      
     }
+
+
   });
 
   // Save the new credentials
@@ -88,3 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.close();
   }
 });
+
+
+

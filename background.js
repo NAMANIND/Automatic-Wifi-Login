@@ -19,7 +19,32 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     });
   }
   
+
+
+
 });
+
+
+
+
+
+  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    if (changeInfo.status === "complete" && tab.url.includes("keepalive")) {
+      chrome.tabs.get(tabId, function(updatedTab) {
+        var currentUrl = updatedTab.url;
+        // console.log("URL with 'keepalive': " + currentUrl);
+        
+        // Save the URL in Chrome storage
+        chrome.storage.local.set({ keepaliveUrl: currentUrl }, function() {
+          console.log("URL saved: " + currentUrl);
+        });
+      });
+    }
+  });
+  
+
+
+
   
 
   const refreshInterval = 2000000; // Refresh every 2000 seconds (33 minutes)
