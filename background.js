@@ -17,11 +17,11 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
         }
       });
     });
+  }else if(tab.url.includes('keepalive?')){
+    chrome.tabs.sendMessage(tabId, {
+      action: "keepalive"
+    });
   }
-  
-
-
-
 });
 
 
