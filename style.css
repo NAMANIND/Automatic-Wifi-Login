@@ -145,7 +145,7 @@ label{
 
 .in-out #login {
     width: 45%;
-    background-color: rgba(0, 0, 255, 0.9);
+    background-color: rgba(10, 10, 238, 0.8);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -154,7 +154,7 @@ label{
   
   .in-out #login:hover {
     transform: scale(1.05);
-    background-color: rgba(0, 0, 255, 1);
+    background-color: rgba(10, 10, 238, 1);
     backface-visibility: hidden;
   }
   
@@ -163,7 +163,7 @@ label{
 .in-out #logout{
  
     width: 45%;
-    background-color: rgb(237, 3,3, 0.9);
+    background-color: rgba(236, 13, 13, 0.8);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -172,6 +172,6 @@ label{
 
 .in-out #logout:hover{
     transform: scale(1.05);
-    background-color: rgb(237, 3, 3,1);
+    background-color: rgb(236, 13, 13 , 1);
     backface-visibility: hidden;
 }
