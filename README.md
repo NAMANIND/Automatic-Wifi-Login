@@ -1,5 +1,18 @@
 # Automatic-Wifi-Login
 
+## Key Features ✨
+
+1. Automatic Login: The extension allows users to automatically log in to their accounts without the need to manually enter credentials each time.
+
+2. Multiple IDs Support: Users can manage and switch between multiple IDs or accounts within the extension, making it convenient for those who need to handle various profiles.
+
+3. Redirect URL: Users can specify a custom redirect URL after successful login, ensuring a seamless experience and directing them to their preferred destination.
+
+4. Logout Button: The extension provides a prominent logout button that allows users to log out of their accounts easily, even if they have closed the main window.
+
+5. Keepalive Window: With the keepalive window feature, the extension will maintain an active session, eliminating the need for users to log in repeatedly when the session expires.
+
+
 
 ## Steps to add AWL extention on your device.
 
