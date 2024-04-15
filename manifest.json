@@ -1,31 +1,25 @@
 {
-    "manifest_version": 3,
-    "name": "Automatic Wifi Login",
-    "version": "1.0",
-    "description": "Automatically fills and submits a Wifi Login.",
-    "permissions": [
-        "tabs",
-      "activeTab",
-      "scripting",
-      "storage"
-    ],
-    
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "awl.png"
-    },
-    "icons": {
-        "128": "awl.png"
-      },
-    "background": {
-        "service_worker": "background.js"
-      },
-      "content_scripts": [
-        {
-            "matches": ["http://*/*"],
+  "manifest_version": 3,
+  "name": "Automatic Wifi Login",
+  "version": "1.0",
+  "description": "Automatically fills and submits a Wifi Login.",
+  "permissions": ["tabs", "storage"],
 
-          "js": ["content.js"]
-        }
-    ]
-  }
-  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "awl.png"
+  },
+  "icons": {
+    "128": "awl.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+
+      "js": ["content.js"]
+    }
+  ]
+}
